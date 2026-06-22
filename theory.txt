@@ -1,1 +1,34 @@
-hello 
+Server : who provides services 
+
+client : who receive services 
+-----------------------------------
+browser : 
+
+        google chrome , firefox , safari etc... 
+
+    client send request to server 
+
+    www.github.com 
+
+    www : world wide web 
+
+    github : 
+
+----------------------------------------------------
+http : http stands as hyper text transfer protocol 
+
+    A way to communication between 
+    client and server 
+
+    http accept request from client and send request to server 
+    http receive response from server and send to client 
+
+there are different methods to convery using http 
+
+POST : post method : which is used to send record to server 
+GET : get method : fetch response from the server 
+PUT : update method : update record in server 
+PATCH : partially update method : half of detailes update in server 
+DELETE : delete method : delete record from server 
+
+https : hyper text transfer protocol secure 
