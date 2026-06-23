@@ -15,4 +15,22 @@ what is coding ?
 ---------------------------
 coding is a just a thing to write a piece of code or write a program. 
 
+=======================================================
+A                       B 
+human                   human 
+English                 Hindi 
+
+         Translator 
+
+------------------------------------
+Compiler : which translate whole source file 
+
+Interpreter : which convert code line by line executation. 
+
+
+C language is a compiler based programing language 
+C++ is a compiler based programing language 
+
+python is an Interpreter based programing language .
+
 
