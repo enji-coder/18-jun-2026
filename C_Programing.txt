@@ -113,4 +113,55 @@ variable : A name which can store a value.
 
 
 
+------------------------------------------------------
+keywords : keywords are reserved predefined words   
+    which have predefined meaning in programing 
 
+    there are 32 keywords are there which written in small letters 
+
+C language is a case sensitive programing language 
+
+ASCII : American standard code for information interchange 
+
+e.g. 
+    ASCII value 
+A  : 65
+
+a  : 97
+
+variable rules : 
+
+1) we can't use predefined keyword as a variable name 
+
+    e.g.  int  int X 
+          int float X 
+
+          int  INT correct 
+        
+2) we can't add whitespace in variable name 
+
+        e.g. int subject score   X 
+
+3) variable name can contain only A to Z , a to z , 0 to 9 digits and _ (underscore) only.
+
+        e.g. int subject_score; 
+
+4) we can't start variable name with digits 
+
+        e.g.  int  01num   X 
+              
+              int  num1;  correct 
+--------------------------------------------
+for character datatype ::: 
+
+syntax : char  <variablename>;
+
+it can accept only single character
+
+i want to accept multiple characters from user so, at that time we call it string 
+insted of character. 
+
+
+for string value 
+
+syntax : char <variablename>[size];
