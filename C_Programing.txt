@@ -165,3 +165,65 @@ insted of character.
 for string value 
 
 syntax : char <variablename>[size];
+
+----------------------------------------------------
+operator : if we want to perform any operations 
+    at that time we have to use specific 
+    symbols its called operator. 
+
+    e.g.  a + b 
+
+    here a and b are operands , and + is an operator 
+
+1) Airthmetic operator 
+
+        +  -  * /  % (module)
+
+2) Assignment operator : 
+         = 
+
+         a = 10  here 10 assign to a 
+         shorthand operator 
+         combination of airthmetic and assignment operator
+
+        +=  , -= , *= , /= ,%= 
+
+3) relational operator : 
+
+        >  <  >=  <=  == != 
+
+4) logical operator : 
+
+        && 
+        ||
+        !
+
+5) incremenet decrement operator 
+    or utility operator 
+
+    ++   -- 
+
+6) Bitwise operator : 
+
+    which is perform on individual bits 
+
+    << left shift 
+    >> right shift ... 
+
+7) conditional operator :   
+    which contain 3 expression 
+    thats why we can call ternary operator 
+
+8) sizeof operator : 
+
+    to find out variable size 
+
+    syntax : sizeof(variablename);
+
+9) special operator : 
+
+    (,) comma operator  
+    (&) address operator 
+    (*) value at operator 
+    
+    
