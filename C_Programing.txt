@@ -226,4 +226,41 @@ operator : if we want to perform any operations
     (&) address operator 
     (*) value at operator 
     
-    
+-------------------------------------------
+int : 2byte or 4byte 
+
+float : 4byte
+
+double : 8byte 
+
+long double : 10byte 
+
+char : 1 byte 
+
+char [size] : size byte 
+-------------------------------------------
+control statements : 
+
+    1) conditional statements 
+    2) looping statements
+    3) jumping statements
+
+1) conditional statements: 
+
+    i) if statements
+    ii) if..else statements
+    iii) elif statement 
+    iv) nested if statement
+    v) switch statement
+
+-----------------------------------
+i) if statement : 
+
+    if condition goes true it will execute true statement
+
+    syntax : 
+
+    if (condition)
+    {
+        // true statement;
+    }
