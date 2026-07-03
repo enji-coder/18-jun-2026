@@ -264,3 +264,78 @@ i) if statement :
     {
         // true statement;
     }
+
+======================================
+2) if..else statement
+
+    if statement execute when condition goes true 
+    and else part execute when condition goes false 
+
+    syntax :
+
+    if (condition)
+    {
+        statement;
+    }
+    else
+    {
+        statement;
+    }
+
+========================================
+3) else..if statement 
+
+    when we want to check multiple conditions at that 
+    time we have to use else..if statement
+
+    syntax : 
+
+    if (condition1)
+    {
+        statement;
+    }
+    else if(condition2)
+    {
+        statement;
+    }
+    else if(condition3)
+    {
+        statement;
+    }
+    else
+    {
+        statement;
+    }
+========================================
+4) Nested if statement : 
+
+    when if condition call inside the another if condition. 
+
+    syntax : 
+
+    if (condition)
+    {
+        if(condition)
+        {
+            statement
+        }
+        else
+        {
+            statement
+        }
+    }
+    else
+    {
+
+    }
+
+/*
+A                  B 
+
+65                 66
+
+65 - 66 
+
+A                   A 
+65 - 65  = 0
+*/
