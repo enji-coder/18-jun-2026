@@ -339,3 +339,61 @@ A                  B
 A                   A 
 65 - 65  = 0
 */
+--------------------------------
+switch statement : when we want to perform multiple conditions 
+    
+    note : in switch statement we can't use 
+        logical operator and relational operators 
+
+    note : switch statement does not support float data 
+        type 
+
+    syntax : 
+        switch(expression)
+        {
+            case value:
+                statement;
+                break;
+
+            case value:
+                statement;
+                break;
+
+            case value:
+                statement;
+                break;
+
+            default:
+                statement;
+        }
+
+-----------------------------------------
+2) Looping statements:
+    
+        repeatation statement
+
+        when we want to display specific 
+        statement multiple times we can use 
+        loop statement 
+
+        in c programing there are 3 types of loop 
+
+        1) for loop 
+        2) while loop
+        3) do.. while loop 
+
+------------------------------------
+i) for loop :  for loop is a sequence controlled 
+    loop. 
+
+    syntax : 
+
+    for(counter1;counter2;counter3)
+    {
+        statement
+    }
+
+    for(initlization;condition;updation)
+    {
+        statement;
+    }
