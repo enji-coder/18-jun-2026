@@ -397,3 +397,65 @@ i) for loop :  for loop is a sequence controlled
     {
         statement;
     }
+
+==========================================
+iii) goto : goto is a jumping statement which means jump to specific 
+    part of program.
+
+    syntax : 
+
+        goto <label>;
+
+
+        label:  
+            block of code 
+==========================================
+function : function is a block of code that code are used to again and again.
+
+there are 3 steps to create function. 
+
+step 1 : function declaration : 
+
+    syntax : 
+
+    <datatype>  funname(); 
+
+step 2 : function defination : 
+
+    syntax : 
+
+    <datatype> funname()
+    {
+        // block of code 
+    }
+
+step 3: function calling : use 
+
+    syntax : 
+
+    funname(); 
+
+===========================================
+types of function 
+
+there are mainly 2 types of function 
+
+1) built-in function 
+2) userdefined function 
+
+-----------------------------------------
+1) built in function : which is predefined by 
+    c programing. 
+
+2) userdefined function : function which is define by user for 
+    own purpose. 
+
+-----------------------------------------
+categories of functions 
+
+there are mainly 4 categories of functions 
+
+1) function without return type and function without parameter 
+2) function with parameter and function without return type 
+3) function with parameter and function with return type 
+4) function without parameter and function with return type 
