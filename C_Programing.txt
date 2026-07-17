@@ -459,3 +459,31 @@ there are mainly 4 categories of functions
 2) function with parameter and function without return type 
 3) function with parameter and function with return type 
 4) function without parameter and function with return type 
+
+-------------------------------------------
+local variable and global variable 
+
+local variable : which is declare inside 
+    the function 
+
+    which is only access by function. 
+
+global variable : which is declare 
+    outside the function 
+    and anyone can use it. 
+    
+--------------------------------------------
+Array : Array is a derived data type 
+    which can store multiple values at single location. 
+
+    arr = {12,23,34,65};
+
+========================================
+Array can store similar data elements at same location.
+
+structure : structure is an userdefined data type 
+        which is contain similar and dis-similar data elements. 
+
+        structure which is declare by struct keyword 
+
+        
