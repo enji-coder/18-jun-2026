@@ -1,0 +1,46 @@
+oops : object oriented programing system or structure
+
+    1) class 
+    2) object 
+    3) encapsulation 
+    4) inheritance 
+    5) polymorphism 
+    6) abstraction 
+    7) aggregation 
+----------------------------------------------
+1) class : class is a userdefined data type 
+        which is contain similar and dis-similar data elemenets at single location
+        
+        it same like structure. 
+
+        syntax : 
+
+        class   <classname>()
+        {
+            data member 
+            member functions 
+        };
+
+2) object : object is an instance of class using of         
+        object we can access properties of class. 
+
+        syntax : 
+
+            <classname>  <objname>; 
+
+------------------------------------------
+Visibility modes or access specifier : 
+        there are 3 visibility modes in c++ 
+
+    1) public 
+    2) private 
+    3) protected 
+
+    1) public : we can access data member and member functions 
+            anywhere outside the class. 
+
+    2) private : only own class can access the properties of 
+            own class. 
+
+    3) protected : only own class and child class can access 
+            the properties of class. 
