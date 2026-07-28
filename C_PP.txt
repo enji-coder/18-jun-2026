@@ -1,0 +1,23 @@
+C++ is an extended version of C language 
+
+C + 1  
+
+    C plus  1 
+
+    C++ contain all features and concepts of C programing and 
+    add one more features which is call oop concept. 
+
+=============================================
+# : predefined 
+
+include : to add something 
+
+<iostream> : io : input output stream 
+using namespace std; 
+void main() X  : int main() 
+{
+    printf();   X 
+        cout<<"";
+}
+
+

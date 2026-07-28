@@ -44,3 +44,119 @@ Visibility modes or access specifier :
 
     3) protected : only own class and child class can access 
             the properties of class. 
+----------------------------------------------------
+constructor : constructor is a special member function. 
+
+        which is invoke automatically whenever we create object. 
+
+        constructor name and class name both are same. 
+
+        constructor can't be written in private mode. 
+
+        syntax : 
+
+        class <classname>
+        {
+                constructorname()
+                {
+
+                }
+        };
+
+-----------------------------------------------
+constructor allocate memory to object 
+
+destructor : destructor means destroy object 
+        using of destructor we can release memory in programing 
+
+        same like constructor destructor name same as class name 
+        destructor does not return any value and does in written in 
+        private mode 
+
+        syntax : 
+        class <classname>
+        {
+                <constructor>()
+                {
+
+                }
+                ~<destructor>()
+                {
+
+                }
+        };
+----------------------------------------
+Types of constructor : 
+
+        there are 3 types of constructor: 
+
+        1) default constructor
+        2) parameterized constructor
+        3) copy constructor :  
+
+--------------------------------------
+2) parameterized constructor: constructor which accept 
+                parameter. 
+        
+        syntax : 
+
+        constructorName(parameter1,parameter2...)
+        {
+
+        }
+-----------------------------------------------
+this pointer : 
+        refer current class properties 
+
+-----------------------------------------------
+3) encapsulation :  
+        it is similar like capsule 
+
+        which contain similar and dis-similar data elemenets at single entity. 
+
+        encapsulation is a concept which achived by class. 
+
+        difference between function and methods. 
+
+        function : function is a block of code that code are used to again 
+                and again. 
+                
+                functions are indenpendent 
+                function declare outside the class 
+        methods : function is a block of code that code are used to again 
+                and again.  methods are dependent on class and object. 
+                methods declare inside the class. 
+-------------------------------------------------------
+getter-setter methods : 
+-------------------------------------------------------
+4) inheritance : inheritance is a most 
+        powerfull concept of oops concept 
+
+        inheritance means derived properties from one 
+        class to another class. 
+
+        there is a parent and child relationship between class 
+        its called inheritance. 
+
+        inheritance provide reusability. 
+        using of inheritance we can reduce our code. 
+        and we can save our development time. 
+
+
+        class A   (parent)  (base)  (super)
+         |
+         V 
+        class B  (child)  (derived)  (sub)
+
+syntax : 
+
+class classname
+{
+        data member 
+        member function 
+};
+class classname: <access specifier>  parentclass 
+{
+        data member 
+        member function 
+};
