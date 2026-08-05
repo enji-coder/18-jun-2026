@@ -5,8 +5,8 @@ oops : object oriented programing system or structure
     3) encapsulation 
     4) inheritance 
     5) polymorphism 
-    6) abstraction 
-    7) aggregation 
+    6) aggregation 
+    7) abstraction
 ----------------------------------------------
 1) class : class is a userdefined data type 
         which is contain similar and dis-similar data elemenets at single location
@@ -160,3 +160,144 @@ class classname: <access specifier>  parentclass
         data member 
         member function 
 };
+--------------------------------------------
+types of inheritance : 
+
+        there are 5 types of inheritance : 
+
+        1) single level inheritance
+        2) multi-level inheritance
+        3) multiple inheritance
+        4) hierarchial inheritance
+        5) hybrid inheritance
+
+1) single level inheritance : 
+
+        class A 
+        |
+        V 
+        class B 
+
+2) multi- level inheritance : 
+
+        class A  
+        |
+        V  
+        class B 
+        | 
+        V 
+        class C 
+
+3) multi-ple inheritance : 
+
+        in real world this is not possible 
+
+        parent1              parent2 
+        |                         |
+        ---------------------------
+                   |
+                   V 
+                 child 
+
+4) hierarchial inheritance: 
+
+                        parent 1 
+                         |
+                         V 
+        -------------------------------------
+        |                                   |
+        V                                   V 
+        childA                          childB 
+
+                     RBI 
+                     |     roi()
+                     V 
+        --------------------------
+        |                       |
+        V                       V 
+        SBI                     BOB 
+
+5) Hybrid inheritance : 
+
+                    class A 
+                        |
+                        V 
+                -----------------
+                |               |
+          class B              class C 
+                |               |
+                -----------------
+                        |
+                        V 
+                        D 
+
+        combination of hierarchial inheritance and multiple inheritance
+
+        there is one issue in hybrid inheritance 
+        when we inherite class A in B and C  D class receive 2 copies of 
+        class A 
+
+        we need to inherite class A in virtual mode. 
+
+=============================================================
+5) Polymorphism :  poly means many and morphism means forms 
+        polymorphism is derived from greek word 
+
+        which means one class or more class has same name methods. 
+
+        there are mainly 2 types of polymorphism:
+
+        i) method overloading 
+        ii) method overriding 
+
+        i) method overloading : 
+                one class can contain same name multiple
+                methods with differennt arguments. 
+
+
+-----------------------------------------------
+Method overriding : 
+
+        when parent and child both have same name method its 
+        called method overriding. 
+
+        
+=====================================
+6) Aggregation : 
+
+        inheritance provide IS - A relationship 
+
+        Aggregation provide HAS - A relationship
+
+        e.g. department has a faculty 
+
+        provide reference of class to another class. 
+
+===========================================
+7) Abstraction : 
+
+        Abstraction is a most powerfull concept of oops system 
+
+        which is represent only few information 
+        not allocated background information. 
+
+
+             ParentA 
+                |
+                V 
+
+        ChildA     ChildB 
+
+           land      land 
+
+-----------------------------------------
+pure virtual function : 
+        function without body means only function declaration.
+
+        syntax : 
+        virtual funname() = 0; 
+
+abstract class : A class which is contain pure virtual function. 
+        and abstraction which is achieve by abstract class. 
+
+        

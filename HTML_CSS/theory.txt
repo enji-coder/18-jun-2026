@@ -1,0 +1,85 @@
+html : hyper text markup language 
+
+    whenever we want to design webpages we must have to use html.
+
+------------------------------------------
+html is a collection of tags 
+
+    there are 2 types of tags 
+
+    1) singular tag 
+    2) paired tag 
+
+    there are only 3 tags are singular 
+
+        <img>
+        <hr>
+        <br>
+
+    paired tags :   <html>   .. </html>
+            <openingtag>  .... </closingTag> 
+
+============================================
+structure of html webpage : 
+
+<html>
+    <head>  
+    </head>
+
+    <body>
+    </body>
+</html>
+
+====================================
+heading elements : 
+
+<h1> ... </h1>
+<h2> ... </h2>
+.
+.
+.
+<h6> ... </h6>
+=====================
+paragraph tag 
+
+<p> this is paragraph tag </p>
+
+=============================
+formatting tags : 
+
+<b>  : bold 
+<i> : italic 
+<u> : underline
+<mark> : highlight 
+
+<sup>
+
+=================================
+list elements 
+
+there are 3 types of list in html 
+
+1) unorder list 
+2) order list 
+3) description list 
+
+
+1) unorder list : 
+
+    <ul>  : unorder 
+    <li>  : list of item 
+
+2) order list : 
+
+    <ol> : order list 
+    <li> : list of item 
+
+3) Description List : 
+
+    <dl> : description list 
+    <dt> : description tag 
+    <dd> : description details 
+====================================
+website : collection of webpages 
+
+    
