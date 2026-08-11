@@ -1,0 +1,46 @@
+Database : Database is a collection of records in tabular format. 
+
+    there are mainly 2 types of records 
+
+    1) DBMS : database management system 
+
+    2) RDBMS : Relational database management system
+
+--------------------------------------------------------
+what is table ?
+
+    Table is a one kind place in database which is contain records 
+    
+    in simple language we can say that table is a combination 
+    of row and column. 
+
+    row : row which is represent specific single record 
+
+    column : which is represent field of table 
+
+    |     |
+    V     V 
+    -------------------------------
+    id  |   Name |  Email      
+    -------------------------------
+    1   |   AAA  |  a@gmail.com    (r1)
+    2   |   BBB  |  b@gmail.com    (r2)
+    
+    column :  id , name , email 
+
+--------------------------------------------------------
+sql : sql stands for structure query language. 
+
+    using sql we can add , remove , update , filter records from the table. 
+
+-----------------------------------------
+types of sql : 
+
+1) DDL : Data defination language. 
+
+    using ddl command we can add database , remove , modify and 
+    many more with tables. 
+
+    using of ddl command we can modify structure of table. and can create or remove 
+    database.
+    
