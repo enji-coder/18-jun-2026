@@ -44,3 +44,115 @@ types of sql :
     using of ddl command we can modify structure of table. and can create or remove 
     database.
     
+    syntax : 
+
+        #create database <databasename>; 
+
+        e.g.  #create database 18_junedb 
+
+---------------------------------------------
+    open cmd 
+        |
+        V 
+    login your mysql account 
+        |
+        V 
+    
+    #mysql -u root -p 
+    Enter password : 
+
+------------------------------------
+check all databases 
+
+    #show databases;
+
+----------------------------------
+==> create database 18junedb;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| 18junedb           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+========================================
+                    ZOMATO 
+                    |
+                    V 
+    customer       rest         rider        feedback
+
+---------------------------------------
+# use <database>;
+
+mysql> use 18junedb;
+Database changed
+---------------------------------------
+table creation 
+
+syntax : 
+    create table <tablename>
+    (
+        fieldname   datatype,
+        fieldname   datatype,
+        fieldname   datatype
+        .
+        .
+    );
+
+mysql> create table student
+    -> (
+    -> id int,
+    -> name varchar(20)
+    -> );
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> desc student;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+
+DDL : commands : 
+
+    1) CREATE 
+    2) ALTER 
+    3) TRUNCATE 
+    4) DROP 
+
+---------------------------------
+4) DROP : to remove table from the database 
+
+        and to remove database 
+
+        syntax : 
+        #drop table <tablename>;
+        #drop database <databasename>;
+--------------------------------------------
+mysql> drop table student;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc student;
+ERROR 1146 (42S02): Table '18junedb.student' doesn't exist
+
+
+mysql> drop database 18junedb;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
