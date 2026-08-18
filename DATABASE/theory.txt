@@ -156,3 +156,366 @@ mysql> show databases;
 | performance_schema |
 | sys                |
 +--------------------+
+
+======================================================
+    2) ALTER :  Alter command mainly use to restructure of table 
+
+        using of Alter command we can modify column name, datatype , we can add new column 
+        we can drop existing column using of Alter command.
+
+
+    C:\Users\baps>mysql -u root -p
+
+            mysql> show databases;
+
+            mysql> create database 18june;
+
+            mysql> use 18june;
+
+            mysql> create table student
+                -> (
+                -> id int,
+                -> name varchar(20)
+                -> );
+
+            requirement of new column 
+
+            syntax : alter table <tablename> add <columnname> <datatype>; 
+
+            mysql> alter table student add email varchar(20);
+            
+            mysql> desc student;
+                +-------+-------------+------+-----+---------+-------+
+                | Field | Type        | Null | Key | Default | Extra |
+                +-------+-------------+------+-----+---------+-------+
+                | id    | int         | YES  |     | NULL    |       |
+                | name  | varchar(20) | YES  |     | NULL    |       |
+                | email | varchar(20) | YES  |     | NULL    |       |
+                +-------+-------------+------+----
+
+            for remove any unwanted field or column from existing table 
+
+            syntax : alter table <tablename> drop <columnname>;
+
+            mysql> alter table student drop email;
+
+            mysql> desc student;
+                +-------+-------------+------+-----+---------+-------+
+                | Field | Type        | Null | Key | Default | Extra |
+                +-------+-------------+------+-----+---------+-------+
+                | id    | int         | YES  |     | NULL    |       |
+                | name  | varchar(20) | YES  |     | NULL    |       |
+
+            mysql> alter table student add email varchar(20) first;
+
+            mysql> desc student;
+            +-------+-------------+------+-----+---------+-------+
+            | Field | Type        | Null | Key | Default | Extra |
+            +-------+-------------+------+-----+---------+-------+
+            | email | varchar(20) | YES  |     | NULL    |       |
+            | id    | int         | YES  |     | NULL    |       |
+            | name  | varchar(20) | YES  |     | NULL    |       |
+            +-------+-------------+------+-----+---------+-------+
+
+            mysql> alter table student add email varchar(20) after id;
+            mysql> desc student;
+            +-------+-------------+------+-----+---------+-------+
+            | Field | Type        | Null | Key | Default | Extra |
+            +-------+-------------+------+-----+---------+-------+
+            | id    | int         | YES  |     | NULL    |       |
+            | email | varchar(20) | YES  |     | NULL    |       |
+            | name  | varchar(20) | YES  |     | NULL    |       |
+            +-------+-------------+------+-----+---------+-------+
+            
+            mysql> alter table student modify email varchar(40);
+
+            mysql> desc student;
+                +-------+-------------+------+-----+---------+-------+
+                | Field | Type        | Null | Key | Default | Extra |
+                +-------+-------------+------+-----+---------+-------+
+                | id    | int         | YES  |     | NULL    |       |
+                | email | varchar(40) | YES  |     | NULL    |       |
+                | name  | varchar(20) | YES  |     | NULL    |       |
+                +-------+-------------+------+-----+---------+-------+
+                3 rows in set (0.00 sec) 
+
+            mysql>  alter table student change name first_name varchar(20);
+            Query OK, 0 rows affected (0.03 sec)
+            Records: 0  Duplicates: 0  Warnings: 0
+
+            mysql> desc student;
+            +------------+-------------+------+-----+---------+-------+
+            | Field      | Type        | Null | Key | Default | Extra |
+            +------------+-------------+------+-----+---------+-------+
+            | id         | int         | YES  |     | NULL    |       |
+            | email      | varchar(40) | YES  |     | NULL    |       |
+            | first_name | varchar(20) | YES  |     | NULL    |       |
+            +------------+-------------+------+-----+---------+-------+
+-------------------------------------------------
+-------------------------------------------------
+    #use 18june;
+
+    3) TRUNCATE : TRUNCATE command which mainly use to remove all rows from the table. 
+
+        in a simple language we can say that TRUNCATE command remove all data from the table. 
+
+        difference between drop and TRUNCATE
+
+        drop : completly remove table from the database. 
+
+            after executation of drop command we can't find out table in memory. 
+
+        TRUNCATE : using of TRUNCATE we can just deleting all records from the table 
+            not destroying table from the database. 
+
+
+        drop : remove data , remove structure , remove table 
+        TRUNCATE : remove data , remain structure as it is and remain table as it is 
+
+        syntax : TRUNCATE table <tablename> 
+
+    
+    e.g.    
+        id      name            subject 
+        1       Anjali          Python
+        2       Mittal          Java 
+        4       
+        
+        by default increment by 1 when we execute TRUNCATE command 
+        it reset counter from 1 
+
+=========================================================
+2) DML COMMAND :  DML Command stands for Data modification language 
+
+    using of dml commands we can add, remove and update records in table. 
+
+        i) INSERT 
+        ii) UPDATE 
+        iii) DELETE 
+
+    i) INSERT : whenever we want to store new record in existing 
+            table we have to execute insert command. 
+
+            using of inser we can insert one or many records at a time. 
+
+            there are various way to execute insert command. 
+
+            1) traditional way : 
+
+                INSERT INTO <TABLENAME>     
+                    (column1,column2.....)
+                    values (.....);
+
+    -----------------------------------------------------------
+    mysql> use 18june;
+    mysql> show tables;
++------------------+
+| Tables_in_18june |
++------------------+
+| student          |
++------------------+
+
+
+mysql> desc student;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| id         | int         | YES  |     | NULL    |       |
+| email      | varchar(40) | YES  |     | NULL    |       |
+| first_name | varchar(20) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> insert into student
+    -> (id,email,first_name)
+    -> values
+    -> (1,'a@gmail.com','aaaa');
+Query OK, 1 row affected (0.10 sec)
+
+
+mysql> select * from student;
++------+-------------+------------+
+| id   | email       | first_name |
++------+-------------+------------+
+|    1 | a@gmail.com | aaaa       |
++------+-------------+------------+
+
+mysql> insert into student
+    -> (id,email,first_name)
+    -> values
+    -> (5,'b@gmail.com','bbbb');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from student;
++------+-------------+------------+
+| id   | email       | first_name |
++------+-------------+------------+
+|    1 | a@gmail.com | aaaa       |
+|    5 | b@gmail.com | bbbb       |
++------+-------------+------------+
+
+------------------------------
+multiple entries : 
+
+syntax : insert into <tablename> 
+          (column1,column2...)
+          values
+          (v1,...),
+          (v2,...),
+          (v3,...)
+
+mysql> insert into student
+    -> (id,email,first_name)
+    -> values
+    -> (2,'c@gmail.com','cccc'),
+    -> (3,'d@gmail.com','dddd'),
+    -> (4,'e@gmail.com','eeee');
+    
+mysql> select * from student;
++------+-------------+------------+
+| id   | email       | first_name |
++------+-------------+------------+
+|    1 | a@gmail.com | aaaa       |
+|    5 | b@gmail.com | bbbb       |
+|    2 | c@gmail.com | cccc       |
+|    3 | d@gmail.com | dddd       |
+|    4 | e@gmail.com | eeee       |
++------+-------------+------------+
+
+
+-----------------------------------------------
+ii) UPDATE : to update or modify existing field in table 
+        using of update command. 
+
+        syntax : 
+
+        UPDATE <tablename>
+        SET 
+        columnname = value,
+        columnname = value
+        where id = <dynamicvalue>;
+
+
+mysql> update student
+    -> set
+    -> first_name = "Anjali",
+    -> email = 'anjali@gmail.com'
+    -> where
+    -> id = 1;
+
+
+mysql> select * from student;
++------+------------------+------------+
+| id   | email            | first_name |
++------+------------------+------------+
+|    1 | anjali@gmail.com | Anjali     |
+|    5 | b@gmail.com      | bbbb       |
+|    2 | c@gmail.com      | cccc       |
+|    3 | d@gmail.com      | dddd       |
+|    4 | e@gmail.com      | eeee       |
++------+------------------+------------+
+---------------------------------------------
+1) primary key : which is represent current table indentity 
+        which we can connect with another table 
+
+    
+mysql> create table emp
+     (
+     id int  primary key auto_increment,
+     name varchar(20),
+     salary int,
+     city varchar(20)
+     );
+
+
+ desc emp;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| id     | int         | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(20) | YES  |     | NULL    |                |
+| salary | int         | YES  |     | NULL    |                |
+| city   | varchar(20) | YES  |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+
+insert into emp
+    -> (name,salary,city)
+    -> values
+    -> ('Anjali',15000,'Ahmedabad'),
+    -> ('Riya',25000,'Ahmedabad'),
+    -> ('Diya',20000,'Surat');
+
+select * from emp;
++----+--------+--------+-----------+
+| id | name   | salary | city      |
++----+--------+--------+-----------+
+|  1 | Anjali |  15000 | Ahmedabad |
+|  2 | Riya   |  25000 | Ahmedabad |
+|  3 | Diya   |  20000 | Surat     |
++----+--------+--------+-----------+
+
+ update emp
+    -> set
+    -> city = "Mumbai"
+    -> where id = 1;
+
+    select * from emp;
++----+--------+--------+-----------+
+| id | name   | salary | city      |
++----+--------+--------+-----------+
+|  1 | Anjali |  15000 | Mumbai    |
+|  2 | Riya   |  25000 | Ahmedabad |
+|  3 | Diya   |  20000 | Surat     |
++----+--------+--------+-----------++
+
+-------------------------------------------------
+-------------------------------------------------
+==> constraints : A rule which is define which kind and what kind of 
+    data we can store in table. 
+
+    1) primary key : one table can have only 1 primary key 
+                rule of primary key it must be unique 
+                and not null. 
+
+                1
+                1   X 
+
+                1 
+                    X 
+                3
+
+    2) unique : which prevent duplications 
+                syntax : 
+
+                fieldname  data type   unique
+            
+    mysql> alter table emp
+    -> add email varchar(20) unique;
+    
+    select * from emp;
++----+--------+--------+-----------+-------+
+| id | name   | salary | city      | email |
++----+--------+--------+-----------+-------+
+|  1 | Anjali |  15000 | Mumbai    | NULL  |
+|  2 | Riya   |  25000 | Ahmedabad | NULL  |
+|  3 | Diya   |  20000 | Surat     | NULL  |
++----+--------+--------+-----------+-------+
+
+ update emp
+    -> set
+    -> email = 'a@gmail.com'
+    -> where id = 1;
+
+     select * from emp;
++----+--------+--------+-----------+-------------+
+| id | name   | salary | city      | email       |
++----+--------+--------+-----------+-------------+
+|  1 | Anjali |  15000 | Mumbai    | a@gmail.com |
+|  2 | Riya   |  25000 | Ahmedabad | NULL        |
+|  3 | Diya   |  20000 | Surat     | NULL        |
++----+--------+--------+-----------+-------------+
+
+ update emp
+    -> set email='a@gmail.com'
+    -> where id = 2;
+ERROR 1062 (23000): Duplicate entry 'a@gmail.com' for key 'emp.email'

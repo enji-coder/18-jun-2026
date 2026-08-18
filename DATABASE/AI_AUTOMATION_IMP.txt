@@ -1,0 +1,123 @@
+Absolutely. If I were designing an **enterprise-level n8n automation portfolio**, I’d focus on workflows that solve repetitive business operations, reduce manual work, and connect tools like Gmail, Google Sheets, Slack, WhatsApp, CRMs, databases, AI, APIs, and cloud storage.
+
+Here are **30 highly useful n8n automation workflows**, ordered roughly from common business automations to more advanced AI-powered systems.
+
+### 1. Lead Capture → CRM Automation
+
+Automatically collect leads from website forms, Facebook/Google forms, or APIs and create/update the lead in a CRM. Send an instant email/WhatsApp notification to the sales team.
+
+### 2. Contact Form → Email + Google Sheets
+
+When someone submits a website contact form, automatically save the information to Google Sheets and send a professional notification email to the business owner.
+
+### 3. New Customer → Welcome Email
+
+When a new customer registers, automatically create their customer record and send a personalized welcome email with useful onboarding information.
+
+### 4. Email Attachment → Google Drive
+
+Monitor Gmail for incoming attachments, automatically download them, organize them into appropriate Google Drive folders, and optionally notify the team.
+
+### 5. Invoice Generation Automation
+
+When an order is completed, collect customer/order information, generate an invoice PDF, store it in Google Drive, and email it to the customer.
+
+### 6. Payment Success → Order Processing
+
+When a payment gateway reports a successful payment, automatically update the order status, notify the customer, and trigger fulfillment/shipping processes.
+
+### 7. Low Inventory Alert
+
+Monitor inventory from Google Sheets, MySQL, PostgreSQL, or an API. When stock falls below a defined threshold, automatically notify the vendor/admin by email, Slack, or WhatsApp.
+
+### 8. Daily Business Report
+
+Every morning, fetch sales, orders, customers, revenue, and inventory information from different systems and generate a summarized report for management.
+
+### 9. Employee Attendance Automation
+
+Collect attendance data from an API, spreadsheet, or attendance system and automatically generate daily/weekly attendance reports for HR.
+
+### 10. Customer Support Ticket Automation
+
+When a support request arrives through email or a form, automatically create a ticket, categorize it, assign it to the appropriate team, and notify the responsible employee.
+
+### 11. AI Email Classifier
+
+Use an AI model to analyze incoming emails and classify them as **Sales, Support, Complaint, Billing, Urgent, Spam**, etc. Then route each email to the correct workflow.
+
+### 12. AI Email Auto-Reply
+
+Analyze incoming customer emails with AI, generate a context-aware response, and either send it automatically or send it to an employee for approval before sending.
+
+### 13. WhatsApp Customer Notification
+
+Automatically send WhatsApp messages for events such as order confirmation, payment success, delivery updates, appointment reminders, or cancellations.
+
+### 14. Order → Delivery Tracking
+
+When an order is created, automatically create a delivery task and send status updates to the customer whenever the delivery status changes.
+
+### 15. Appointment Booking + Reminder
+
+When an appointment is booked, automatically save it to Google Calendar, send confirmation to the customer, and send reminder messages before the appointment.
+
+### 16. Abandoned Cart Recovery
+
+Detect customers who added products to their cart but didn't complete the purchase. After a defined period, automatically send reminder emails or WhatsApp messages.
+
+### 17. Customer Feedback Automation
+
+After an order/service is completed, automatically send a feedback request. Store the response and notify the team if the customer gives a poor rating.
+
+### 18. Negative Review Alert
+
+Monitor reviews from supported platforms/APIs. If a negative review is detected, use AI to analyze the complaint and immediately notify the appropriate team.
+
+### 19. Social Media Content Automation
+
+Take content from a Google Sheet or content database, generate captions using AI, prepare platform-specific content, and publish or schedule it through connected APIs.
+
+### 20. AI Blog Content Pipeline
+
+Provide a topic → AI generates an outline → generates the article → creates metadata → stores the draft in Google Docs/Notion → sends it for human approval.
+
+### 21. Document → AI Summary
+
+Whenever a new PDF/document is uploaded to a specific folder, automatically extract its content, summarize it using AI, and save the summary to Notion/Google Docs.
+
+### 22. Resume Screening Automation
+
+When a candidate uploads a resume, extract the resume text, use AI to compare it against a job description, score the candidate, and store the result in a recruitment database.
+
+### 23. Invoice Data Extraction
+
+When an invoice PDF arrives by email, extract vendor name, invoice number, date, tax, total amount, etc. using OCR/AI and automatically store the structured data in a database or accounting sheet.
+
+### 24. Employee Onboarding Automation
+
+When HR adds a new employee, automatically create their records, generate onboarding tasks, send required documents, create accounts/tasks, and notify the relevant departments.
+
+### 25. Employee Offboarding Automation
+
+When an employee leaves, automatically create an offboarding checklist, notify HR/IT, revoke required access through APIs, archive documents, and inform management.
+
+### 26. Database Backup Automation
+
+Run scheduled database backups, store backup files in cloud storage, verify that the backup completed successfully, and notify administrators if anything fails.
+
+### 27. API Monitoring + Failure Alert
+
+Periodically call important APIs/services and verify response time/status. If an API fails or returns unexpected data, automatically alert the developer/admin through Slack, email, or WhatsApp.
+
+### 28. AI Customer Support Agent
+
+Connect WhatsApp/email/webhook messages to an AI agent. The AI understands the customer's question, searches your knowledge base/database, and responds automatically while escalating complex issues to humans.
+
+### 29. AI Business Data Analyst
+
+Connect n8n to your business database. A user can ask questions such as **"What were our top 10 products this month?"** and the workflow converts the question into database queries, analyzes the result with AI, and returns a human-readable answer.
+
+### 30. Complete AI Business Automation Agent
+
+Build a central AI agent that can understand business requests and execute actions through n8n—for example: **check inventory → find customer → create invoice → send email → update CRM → notify employee**. This becomes a powerful internal AI operations assistant rather than a single-purpose workflow.
