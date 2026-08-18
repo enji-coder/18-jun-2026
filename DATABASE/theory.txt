@@ -519,3 +519,114 @@ select * from emp;
     -> set email='a@gmail.com'
     -> where id = 2;
 ERROR 1062 (23000): Duplicate entry 'a@gmail.com' for key 'emp.email'
+
+    3) NOT NULL : when we want specific field at insert time we can assign not null
+
+            syntax : fieldname  datatype   not null;
+
+            create table emp 
+            (
+                id int primary key auto_increment,
+                email varchar(20) unique not null
+            );
+
+            alter table emp modify name varchar(20) not null;
+
+            mysql> insert into emp
+    -> (salary,city,email)
+    -> values
+    -> (15000,'Ahm','b@gmail.com');
+ERROR 1364 (HY000): Field 'name' doesn't have a default value
+
+    4) default : it will add automatic value whenever we insert record 
+            with null. 
+
+            status = "PENDING" 
+
+        alter table emp add status varchar(20) default "pending";
+
+        desc emp;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| id     | int         | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(20) | NO   |     | NULL    |                |
+| salary | int         | YES  |     | NULL    |                |
+| city   | varchar(20) | YES  |     | NULL    |                |
+| email  | varchar(20) | YES  | UNI | NULL    |                |
+| status | varchar(20) | YES  |     | pending |                |
++--------+-------------+------+-----+---------+----------------+
+        select * from emp;
++----+--------+--------+-----------+-------------+---------+
+| id | name   | salary | city      | email       | status  |
++----+--------+--------+-----------+-------------+---------+
+|  1 | Anjali |  15000 | Mumbai    | a@gmail.com | pending |
+|  2 | Riya   |  25000 | Ahmedabad | NULL        | pending |
+|  3 | Diya   |  20000 | Surat     | NULL        | pending |
++----+--------+--------+-----------+-------------+---------+
+
+    5) check : this constraint which is used to validate value 
+            condition wise 
+
+        create table emp 
+        (
+            id int primary key auto_increment,
+            email varchar(20) unique,
+            age int check (age>=18)
+        );
+
+         alter table emp add age int;
+
+         alter table emp
+        -> add
+        -> constraint age
+        -> check (age>=18);
+
+        desc emp;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| id     | int         | NO   | PRI | NULL    | auto_increment |
+| name   | varchar(20) | NO   |     | NULL    |                |
+| salary | int         | YES  |     | NULL    |                |
+| city   | varchar(20) | YES  |     | NULL    |                |
+| email  | varchar(20) | YES  | UNI | NULL    |                |
+| status | varchar(20) | YES  |     | pending |                |
+| age    | int         | YES  |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+         insert into emp
+         (name,salary,city,email,age)
+         values
+         ('shreya',45000,'mum','shre@gmail.com',45);
+
+         insert into emp
+        (name,salary,city,email,age)
+        values
+        ('shreya',45000,'mum','sh@gmail.com',5);
+            ERROR 3819 (HY000): Check constraint 'age' is violated.
+
+=========================================
+6) foreign key : which is mainly use to connect with another table 
+
+        when we want to provide relationship between two tables we have to use 
+        foreign key 
+
+        create department
+        (
+            id int primary key auto_increment,
+            d_name varchar(20)    
+        );
+
+        1     IT 
+        2     Admin 
+
+
+        create table emp
+        (
+            id int primary key auto_increment,
+            name varchar(20),
+            d_id  int,
+            foreign key (d_id) references department(id)
+        );
+
+        
