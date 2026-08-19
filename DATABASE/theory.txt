@@ -629,4 +629,105 @@ ERROR 1364 (HY000): Field 'name' doesn't have a default value
             foreign key (d_id) references department(id)
         );
 
-        
+===================================================
+    iii) DELETE : when we want to remove specific row or records from the 
+                existing table we have to use delete command 
+
+            syntax : 
+
+                delete from <tablename> where columnname = value; 
+
+
+ delete from emp where id = 4;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from emp;
++----+--------+--------+-----------+-------------+---------+------+
+| id | name   | salary | city      | email       | status  | age  |
++----+--------+--------+-----------+-------------+---------+------+
+|  1 | Anjali |  15000 | Mumbai    | a@gmail.com | pending | NULL |
+|  2 | Riya   |  25000 | Ahmedabad | NULL        | pending | NULL |
+|  3 | Diya   |  20000 | Surat     | NULL        | pending | NULL |
++----+--------+--------+-----------+-------------+---------+------+
+            
+========================================
+1) DDL 
+2) DML 
+3) DQL : Data query language 
+
+    most powerfull command in sql language
+
+    using of DQL we can retrive data from the database 
+    with specific condition wise 
+
+        i) select 
+
+    when we want to retrive all data from the table 
+
+        syntax : 
+
+        select * from <tablename>;
+
+===============================================
+    => when we want to display specific field 
+
+        syntax : 
+
+        select column1,column2,column3...  from <tablename>;
+
+         select name,city from emp ;
++--------+-----------+
+| name   | city      |
++--------+-----------+
+| Anjali | Mumbai    |
+| Riya   | Ahmedabad |
+| Diya   | Surat     |
++--------+-----------+
+     => alter table emp add department varchar(20);
+     => update emp set department = "IT" where id = 1;
+     => update emp set department = "HR" where id = 2;
+     => update emp set department = "IT" where id = 3;
+
+    => fetch distinct record from the table 
+
+select distinct department from emp;
++------------+
+| department |
++------------+
+| IT         |
+| HR         |
++------------+
+
+    => operators 
+
+    comparision operator : 
+
+    =  : compairsion equality 
+    >  : greater than 
+    < 
+    >= 
+    <= 
+    != 
+
+ select * from emp where salary > 20000;
++----+------+--------+-----------+-------+---------+------+------------+
+| id | name | salary | city      | email | status  | age  | department |
++----+------+--------+-----------+-------+---------+------+------------+
+|  2 | Riya |  25000 | Ahmedabad | NULL  | pending | NULL | HR         |
++----+------+--------+-----------+-------+---------+------+------------+
+1 row in set (0.00 sec)
+
+mysql> select * from emp where salary >= 20000;
++----+------+--------+-----------+-------+---------+------+------------+
+| id | name | salary | city      | email | status  | age  | department |
++----+------+--------+-----------+-------+---------+------+------------+
+|  2 | Riya |  25000 | Ahmedabad | NULL  | pending | NULL | HR         |
+|  3 | Diya |  20000 | Surat     | NULL  | pending | NULL | IT         |
++----+------+--------+-----------+-------+---------+------+------------+
+
+select * from emp where department != "IT";
++----+------+--------+-----------+-------+---------+------+------------+
+| id | name | salary | city      | email | status  | age  | department |
++----+------+--------+-----------+-------+---------+------+------------+
+|  2 | Riya |  25000 | Ahmedabad | NULL  | pending | NULL | HR         |
++----+------+--------+-----------+-------+---------+------+------------+
