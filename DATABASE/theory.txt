@@ -731,3 +731,89 @@ select * from emp where department != "IT";
 +----+------+--------+-----------+-------+---------+------+------------+
 |  2 | Riya |  25000 | Ahmedabad | NULL  | pending | NULL | HR         |
 +----+------+--------+-----------+-------+---------+------+------------+
+--------------------------------------
+
+update emp set age = 25 where id = 1;
+update emp set age = 35 where id = 2;
+update emp set age = 29 where id = 3;
+
+ select * from emp;
++----+--------+--------+-----------+-------------+---------+------+------------+
+| id | name   | salary | city      | email       | status  | age  | department |
++----+--------+--------+-----------+-------------+---------+------+------------+
+|  1 | Anjali |  15000 | Mumbai    | a@gmail.com | pending |   25 | IT         |
+|  2 | Riya   |  25000 | Ahmedabad | NULL        | pending |   35 | HR         |
+|  3 | Diya   |  20000 | Surat     | NULL        | pending |   29 | IT         |
++----+--------+--------+-----------+-------------+---------+------+------------+
+
+
+logical operator : 
+
+        AND  : check both the condition and make sure both are true 
+        OR   : need one or more condition true 
+        NOT  : except this 
+
+
+        select * from emp where city="Ahmedabad" and age >= 20;
++----+------+--------+-----------+-------+---------+------+------------+
+| id | name | salary | city      | email | status  | age  | department |
++----+------+--------+-----------+-------+---------+------+------------+
+|  2 | Riya |  25000 | Ahmedabad | NULL  | pending |   35 | HR         |
++----+------+--------+-----------+-------+---------+------+------------+
+
+        e.g.   student 
+
+            email password username 
+
+            select * from student where email=    and password = ;
+
+OR : Operator 
+
+select * from emp where department ="IT" or department="Admin";
++----+--------+--------+--------+-------------+---------+------+------------+
+| id | name   | salary | city   | email       | status  | age  | department |
++----+--------+--------+--------+-------------+---------+------+------------+
+|  1 | Anjali |  15000 | Mumbai | a@gmail.com | pending |   25 | IT         |
+|  3 | Diya   |  20000 | Surat  | NULL        | pending |   29 | IT         |
++----+--------+--------+--------+-------------+---------+------+------------+
+
+
+NOT ::::: 
+
+select * from emp where not department = "HR";
++----+--------+--------+--------+-------------+---------+------+------------+
+| id | name   | salary | city   | email       | status  | age  | department |
++----+--------+--------+--------+-------------+---------+------+------------+
+|  1 | Anjali |  15000 | Mumbai | a@gmail.com | pending |   25 | IT         |
+|  3 | Diya   |  20000 | Surat  | NULL        | pending |   29 | IT         |
+|  5 | kiya   |  19000 | mumbai | k@gmail.com | pending |   35 | Sales      |
+|  6 | Niya   |  45000 | mumbai | n@gmail.com | pending |   29 | Sales      |
++----+--------+--------+--------+-------------+---------+------+------------+
+
+IN : operator 
+
+select * from emp where city in ("Ahmedabad","mumbai");
++----+--------+--------+-----------+-------------+---------+------+------------+
+| id | name   | salary | city      | email       | status  | age  | department |
++----+--------+--------+-----------+-------------+---------+------+------------+
+|  1 | Anjali |  15000 | Mumbai    | a@gmail.com | pending |   25 | IT         |
+|  2 | Riya   |  25000 | Ahmedabad | NULL        | pending |   35 | HR         |
+|  5 | kiya   |  19000 | mumbai    | k@gmail.com | pending |   35 | Sales      |
+|  6 | Niya   |  45000 | mumbai    | n@gmail.com | pending |   29 | Sales      |
++----+--------+--------+-----------+-------------+---------+------+------------+
+4 rows in set (0.00 sec)
+
+NOT IN : operator 
+
+ select * from emp where department not in ("IT","HR");
++----+------+--------+--------+-------------+---------+------+------------+
+| id | name | salary | city   | email       | status  | age  | department |
++----+------+--------+--------+-------------+---------+------+------------+
+|  5 | kiya |  19000 | mumbai | k@gmail.com | pending |   35 | Sales      |
+|  6 | Niya |  45000 | mumbai | n@gmail.com | pending |   29 | Sales      |
++----+------+--------+--------+-------------+---------+------+------------+
+2 rows in set (0.00 sec)
+
+BETWEEN 
+
+mysql> select * from emp where salary between 30000 and 50000;
