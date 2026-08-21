@@ -817,3 +817,118 @@ NOT IN : operator
 BETWEEN 
 
 mysql> select * from emp where salary between 30000 and 50000;
+
+---------------------------------------------------------
+ORDER BY 
+
+when we want to retrive records by ASC order or desc 
+
+    by default order by asc by ID field 
+
+select * from emp order by salary;
++----+--------+--------+-----------+-------------+---------+------+------------+
+| id | name   | salary | city      | email       | status  | age  | department |
++----+--------+--------+-----------+-------------+---------+------+------------+
+|  1 | Anjali |  15000 | Mumbai    | a@gmail.com | pending |   25 | IT         |
+|  5 | kiya   |  19000 | mumbai    | k@gmail.com | pending |   35 | Sales      |
+|  3 | Diya   |  20000 | Surat     | NULL        | pending |   29 | IT         |
+|  2 | Riya   |  25000 | Ahmedabad | NULL        | pending |   35 | HR         |
+|  6 | Niya   |  45000 | mumbai    | n@gmail.com | pending |   29 | Sales      |
++----+--------+--------+-----------+-------------+---------+------+------------+
+
+ select name as username , salary as income from emp;
++----------+--------+
+| username | income |
++----------+--------+
+| Anjali   |  15000 |
+| Riya     |  25000 |
+| Diya     |  20000 |
+| kiya     |  19000 |
+| Niya     |  45000 |
++----------+--------+
+
+select name,salary,department from emp order by salary desc;
++--------+--------+------------+
+| name   | salary | department |
++--------+--------+------------+
+| Niya   |  45000 | Sales      |
+| Riya   |  25000 | HR         |
+| Diya   |  20000 | IT         |
+| kiya   |  19000 | Sales      |
+| Anjali |  15000 | IT         |
++--------+--------+------------+
+5 rows in set (0.00 sec)
+
+
+select name,department,salary from emp
+    -> where department="IT"
+    -> order by
+    -> salary
+    -> desc;
++--------+------------+--------+
+| name   | department | salary |
++--------+------------+--------+
+| Diya   | IT         |  20000 |
+| Anjali | IT         |  15000 |
++--------+------------+--------+
+
+----------------------------------------------
+limit : we can set limit how many records we want using
+
+    select query 
+
+    select * from emp limit 3;
++----+--------+--------+-----------+-------------+---------+------+------------+
+| id | name   | salary | city      | email       | status  | age  | department |
++----+--------+--------+-----------+-------------+---------+------+------------+
+|  1 | Anjali |  15000 | Mumbai    | a@gmail.com | pending |   25 | IT         |
+|  2 | Riya   |  25000 | Ahmedabad | NULL        | pending |   35 | HR         |
+|  3 | Diya   |  20000 | Surat     | NULL        | pending |   29 | IT         |
++----+--------+--------+-----------+-------------+---------+------+------------+
+3 rows in set (0.00 sec)
+
+select name,department,city,salary from emp
+    -> where salary > 15000
+    -> order by salary
+    -> desc
+    -> limit 2;
++------+------------+-----------+--------+
+| name | department | city      | salary |
++------+------------+-----------+--------+
+| Niya | Sales      | mumbai    |  45000 |
+| Riya | HR         | Ahmedabad |  25000 |
++------+------------+-----------+--------+
+
+
+LIKE :
+
+ select * from emp where name like 'a%';
++----+--------+--------+--------+-------------+---------+------+------------+
+| id | name   | salary | city   | email       | status  | age  | department |
++----+--------+--------+--------+-------------+---------+------+------------+
+|  1 | Anjali |  15000 | Mumbai | a@gmail.com | pending |   25 | IT         |
++----+--------+--------+--------+-------------+---------+------+------------+
+
+select * from emp where name like '%n%';
++----+--------+--------+--------+-------------+---------+------+------------+
+| id | name   | salary | city   | email       | status  | age  | department |
++----+--------+--------+--------+-------------+---------+------+------------+
+|  1 | Anjali |  15000 | Mumbai | a@gmail.com | pending |   25 | IT         |
+|  6 | Niya   |  45000 | mumbai | n@gmail.com | pending |   29 | Sales      |
++----+--------+--------+--------+-------------+---------+------+------------+
+
+
+--------------------------------------------------------
+page 0   ---  0 - 10 
+
+page 1   ---  11 -20   OFFSET 
+
+ select name from emp
+    -> limit 2 offset 0;
++--------+
+| name   |
++--------+
+| Anjali |
+| Riya   |
++--------+
+
